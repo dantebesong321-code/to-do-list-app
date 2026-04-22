@@ -12,6 +12,7 @@ return (
   <div style={navBarStyle}>
     <a href="">2-DO</a>
     <a href="">To-Do-List</a>
+    
   </div>
 );
 

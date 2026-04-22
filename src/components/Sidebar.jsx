@@ -6,7 +6,8 @@ const sideBarStyle = {
   height: "350px",
   padding: "8px",
   textDecoration: "none",
-  textColor: "white"
+  textColor: "white",
+  borderRadius: "16px"
 };
 
   return (
