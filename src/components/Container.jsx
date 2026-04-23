@@ -5,7 +5,8 @@ function Container(props) {
     border: "white 2px solid",
     padding: "20px",
     backgroundColor: props.bg,
-    with: "450px"
+    with: "150px",
+    height: "50px"
   };
 
   return <div style={containerStyles}>{props.children}</div>;
