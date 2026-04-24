@@ -28,7 +28,7 @@ function List() {
       {tasks.map((taskObj, index) => {
         return (
           <div style={listStyles} key={index}>
-            <h3>{taskObj.task}</h3>
+            <p>{taskObj.task}</p>
             <p>{taskObj.completed ? "✅ Done" : "❌ Not done"}</p>
             {/* 3. bouton delete */}
             <button onClick={() => handleDelete(index)}>Delete</button>

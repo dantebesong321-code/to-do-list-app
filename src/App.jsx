@@ -12,42 +12,30 @@ import { Routes, Route, Link } from "react-router-dom";
 import AboutPage from './pages/AboutPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ItemDetailsPage from './pages/ItemDetailsPage.jsx';
+import Dashboard from './pages/Dashboard.jsx';
 
 function App() {
-  
   return (
     <>
-      <nav>
-        <Link to="/">Home </Link> <br />
-        <Link to="/">About </Link> <br />
-      </nav>
+      <Navbar />
+      <Task />
 
-      <Routes>
+      <div className="content-area">
+        <Sidebar />
 
-        <Navbar />
-        <div>
-          <div className="content-area">
-            <H3>Task</H3>
-            <Route path={"/"} element={<HomePage />} />
-            <Route path={"/about"} element={<AboutPage />} />
+        <Dashboard />
 
-            <Sidebar></Sidebar>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/item/:id" element={<ItemDetailsPage />} />
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+      </div>
 
-            <List />
-
-            {/* router */}
-            {/* <Router>
-          {/* <Router path={}></Router> 
-
-          </Router>*/}
-
-            <ListArea />
-          </div>
-        </div>
-        <Footer />
-      </Routes>
+      <Footer />
     </>
   );
 }
 
-export default App
+export default App;
