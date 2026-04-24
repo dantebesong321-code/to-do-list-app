@@ -11,11 +11,9 @@ const listStyles = {
 };
 
 
-
 function List() {
-  // 1. state = copie des données JSON
+
   const [tasks, setTasks] = useState(allTasks);
-  // 2. fonction delete
   const handleDelete = (indexToDelete) => {
     const filteredTasks = tasks.filter((_, index) => {
       return index !== indexToDelete;
@@ -30,7 +28,6 @@ function List() {
           <div style={listStyles} key={index}>
             <p>{taskObj.task}</p>
             <p>{taskObj.completed ? "✅ Done" : "❌ Not done"}</p>
-            {/* 3. bouton delete */}
             <button onClick={() => handleDelete(index)}>Delete</button>
           </div>
         );

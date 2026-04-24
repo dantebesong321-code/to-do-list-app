@@ -1,5 +1,12 @@
 import { useState } from "react";
 
+
+ // Clone the array in parent and bring here
+  // We connect new input to existing array
+  // We use the .push method
+  // Use the onChange function
+
+
 function AddTask() {
   const [taskInputValue, setTaskInputValue] = useState("");
 
@@ -8,12 +15,13 @@ function AddTask() {
     setTaskInputValue(event.target.value);
   };
 
+ 
+
   const addNewTask = (event) => {
     event.preventDefault();
     console.log("Task added:", taskInputValue);
     setTaskInputValue("");
   };
-
 
   return (
     <div className="task-container">
@@ -21,10 +29,9 @@ function AddTask() {
         <input
           className="input-zone"
           type="text"
-          value={taskInputValue}
-          onChange={handleTaskInput} onChange
-          placeholder= {"Write something"}
+          placeholder={"Write something"}
         />
+
         <button onClick={addNewTask} className="add-task-btn">
           Add task
         </button>

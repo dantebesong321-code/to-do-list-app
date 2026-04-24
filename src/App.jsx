@@ -15,6 +15,9 @@ import ItemDetailsPage from './pages/ItemDetailsPage.jsx';
 import Dashboard from './pages/Dashboard.jsx';
 import HomePage from './pages/HomePage.jsx';
 
+
+let cloneArr = List;
+
 function App() {
   return (
     <>
