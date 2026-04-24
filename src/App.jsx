@@ -4,10 +4,11 @@ import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Footer from "./components/Footer.jsx";
 import Sidebar from "./components/Sidebar.jsx";
-import Task from "./components/AddTask.jsx";
 import List from "./components/List.jsx";
 import ListArea from './components/ListArea.jsx';
 import Container from './components/Container.jsx';
+
+
 import { Routes, Route, Link } from "react-router-dom";
 import AboutPage from './pages/AboutPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx'
@@ -19,7 +20,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <Task />
 
       <div className="content-area">
         <Sidebar />
