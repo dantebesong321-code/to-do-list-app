@@ -1,5 +1,3 @@
-
-
 import './App.css';
 import Navbar from './components/Navbar.jsx';
 import Footer from "./components/Footer.jsx";
@@ -7,6 +5,7 @@ import Sidebar from "./components/Sidebar.jsx";
 import List from "./components/List.jsx";
 import ListArea from './components/ListArea.jsx';
 import Container from './components/Container.jsx';
+import AddTask from "./components/AddTask.jsx"
 
 
 import { Routes, Route, Link } from "react-router-dom";
@@ -20,6 +19,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <AddTask />
 
       <div className="content-area">
         <Sidebar />
