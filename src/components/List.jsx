@@ -5,9 +5,13 @@ import allTasks from "../data/tasks.json";
 
 
 const listStyles = {
-  border: "white 2px solid",
-  padding: "8px",
+  backgroundColor: "white",
+  padding: "10px",
   margin: "10px",
+  borderRadius: "10px",
+  fontSize: "12px",
+  boxShadow: "-webkit-box-shadow: 5px 5px 15px 5px rgba(86, 85, 85, 0.1)",
+  boxShadow: "5px 5px 15px 5px rgba(86, 85, 85, 0.1)",
 };
 
 

@@ -1,10 +1,9 @@
-import ListArea from "../components/ListArea";
-
+import List from "../components/List";
 function Dashboard() {
   return (
     <div className="dashboard">
-      <ListArea />
-      
+      <List/>
+  
     </div>
   );
 }
