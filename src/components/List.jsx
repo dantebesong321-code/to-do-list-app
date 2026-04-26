@@ -15,28 +15,23 @@ const listStyles = {
 };
 
 
-function List() {
-
-  const [tasks, setTasks] = useState(allTasks);
+function List({ tasks, setTasks }) {
   const handleDelete = (indexToDelete) => {
-    const filteredTasks = tasks.filter((_, index) => {
-      return index !== indexToDelete;
-    });
+    const filteredTasks = tasks.filter((_, index) => index !== indexToDelete);
     setTasks(filteredTasks);
   };
 
   return (
     <div>
-      {tasks.map((taskObj, index) => {
-        return (
-          <div style={listStyles} key={index}>
-            <p>{taskObj.task}</p>
-            <p>{taskObj.completed ? "✅ Done" : "❌ Not done"}</p>
-            <button onClick={() => handleDelete(index)}>Delete</button>
-          </div>
-        );
-      })}
+      {tasks.map((taskObj, index) => (
+        <div style={listStyles} key={index}>
+          <p>{taskObj.task}</p>
+          <p>{taskObj.completed ? "✅ Done" : "❌ Not done"}</p>
+          <button onClick={() => handleDelete(index)}>Delete</button>
+        </div>
+      ))}
     </div>
   );
 }
+
 export default List;

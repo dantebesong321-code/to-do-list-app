@@ -1,33 +1,21 @@
-//1. We need to access the name in the URL
-//2. We need to search info of that name
-//3. display that info if it exists
-
 import { useParams } from "react-router-dom";
 
-function ItemDetailsPage(props) {
-  // in order to access dymaic parameters in a page or component we need useParams()
-  const params = useParams();
-  console.log(params);
+function ItemDetailsPage({ tasks }) {
+  const { id } = useParams();
 
-  const foundUser = props.userList.find((user) => {
-    return user.id === params.userId;
-  });
-  console.log(foundUser);
+  const item = tasks[id];
 
-  // guard clause for the component
-  if (!foundUser) {
-    return <h3>User not found with that name, please use the correct link</h3>;
+  if (!item) {
+    return <h2>Item not found</h2>;
   }
 
   return (
     <div>
-      <h4>Showing details for a user</h4>
-
-      <h5>Name: {foundUser.username} </h5>
-      <p>City: {foundUser.city} </p>
-      <p>Course: {foundUser.course}</p>
-      <p>ID: {foundUser.id} </p>
+      <h1>Item Details</h1>
+      <p>{item.task}</p>
+      <p>{item.completed ? "✅ Done" : "❌ Not done"}</p>
     </div>
   );
 }
+
 export default ItemDetailsPage;

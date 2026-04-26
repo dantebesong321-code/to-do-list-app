@@ -1,10 +1,12 @@
 import List from "../components/List";
-function Dashboard() {
+
+function Dashboard({ tasks, setTasks }) {
   return (
-    <div className="dashboard">
-      <List/>
-  
+    <div>
+      <h2>Dashboard</h2>
+      <List tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
+
 export default Dashboard;

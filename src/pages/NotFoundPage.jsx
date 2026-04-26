@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 function NotFoundPage() {
   return (
     <div>
-      <h3>Page not found, sorry :(</h3>
-      <p>Please navigate to a different page</p>
+      <h2>404 - Page Not Found</h2>
+      <p>Oops! This page doesn’t exist.</p>
+      <Link to="/">Go back to Dashboard</Link>
     </div>
   );
 }
+
 export default NotFoundPage;

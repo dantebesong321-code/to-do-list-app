@@ -1,33 +1,36 @@
-import './App.css';
-import Navbar from './components/Navbar.jsx';
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Sidebar from "./components/Sidebar.jsx";
-import List from "./components/List.jsx";
-import Container from './components/Container.jsx';
-import AddTask from "./components/AddTask.jsx"
+import AddTask from "./components/AddTask.jsx";
 
-import { Routes, Route, Link } from "react-router-dom";
-import AboutPage from './pages/AboutPage.jsx';
-import NotFoundPage from './pages/NotFoundPage.jsx'
-import ItemDetailsPage from './pages/ItemDetailsPage.jsx';
-import Dashboard from './pages/Dashboard.jsx';
-import HomePage from './pages/HomePage.jsx';
+import { Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/AboutPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
+import ItemDetailsPage from "./pages/ItemDetailsPage.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
-
-let cloneArr = List;
+import allTasks from "./data/tasks.json";
 
 function App() {
+  const [tasks, setTasks] = useState(allTasks);
+
   return (
     <>
       <Navbar />
-      <Sidebar /> <hr />
-      <AddTask />
+      <Sidebar />
+
+      <AddTask setTasks={setTasks} />
 
       <div className="content-area">
         <Routes>
-          <Route path="/home" element={<Dashboard />} />
+          <Route
+            path="/"
+            element={<Dashboard tasks={tasks} setTasks={setTasks} />}
+          />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/item/:id" element={<ItemDetailsPage />} />
+          <Route path="/item/:id" element={<ItemDetailsPage tasks={tasks} />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
