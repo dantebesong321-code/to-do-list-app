@@ -1,10 +1,10 @@
 function AboutPage() {
   return (
     <div>
-      <h1>About This Project</h1>
+      <h2>About This Project</h2>
       <p>This is a To-Do App built using React and React Router.</p>
 
-      <h2>Team Members</h2>
+      <h3>Team Members</h3>
       <ul>
         <li>
           Name: -<a href="https://github.com/yourusername">GitHub</a> |

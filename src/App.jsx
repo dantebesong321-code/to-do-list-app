@@ -19,20 +19,26 @@ function App() {
   return (
     <>
       <Navbar />
-      <Sidebar />
-
-      <AddTask setTasks={setTasks} />
 
       <div className="content-area">
-        <Routes>
-          <Route
-            path="/"
-            element={<Dashboard tasks={tasks} setTasks={setTasks} />}
-          />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/item/:id" element={<ItemDetailsPage tasks={tasks} />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <Sidebar />
+        <div className="container-content">
+          <h2>Welcome!</h2><br />
+          <AddTask setTasks={setTasks} />
+
+          <Routes>
+            <Route
+              path="/"
+              element={<Dashboard tasks={tasks} setTasks={setTasks} />}
+            />
+            <Route path="/about" element={<AboutPage />} />
+            <Route
+              path="/item/:id"
+              element={<ItemDetailsPage tasks={tasks} />}
+            />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
       </div>
 
       <Footer />

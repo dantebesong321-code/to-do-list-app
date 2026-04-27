@@ -3,7 +3,7 @@ import List from "../components/List";
 function Dashboard({ tasks, setTasks }) {
   return (
     <div>
-      <h2>Dashboard</h2>
+      <h3>Your Tasks</h3>
       <List tasks={tasks} setTasks={setTasks} />
     </div>
   );
