@@ -23,7 +23,6 @@ function App() {
       <div className="content-area">
         <Sidebar />
         <div className="container-content">
-          <h2>Welcome!</h2><br />
           <AddTask setTasks={setTasks} />
 
           <Routes>
