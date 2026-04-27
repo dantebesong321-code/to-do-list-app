@@ -1,6 +1,10 @@
 [
-  { "task": "Read the project brief", "completed": true},
-  { "task": "Create a project repository", "completed": false},
-  { "task": "Create React application using Vite", "completed": false},
-  { "task": "Finish Day 1 Development Tasks", "completed": false}
+  { "task": "Decode the mysterious project brief 🕵️‍♂️", "completed": true },
+  { "task": "Forge the sacred repository ⚔️", "completed": false },
+  { "task": "Summon a React app with Vite magic ✨", "completed": false },
+  { "task": "Conquer Day 1 development quests 🏆", "completed": false },
+  { "task": "Launch React + Vite sequence 🚀", "completed": false },
+  { "task": "Review mission parameters 📋", "completed": false },
+  { "task": "Open the ancient project scroll 📜", "completed": false }
+ 
 ]

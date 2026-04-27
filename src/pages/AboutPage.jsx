@@ -7,8 +7,10 @@ function AboutPage() {
       <h3>Team Members</h3>
       <ul>
         <li>
-          Name: -<a href="https://github.com/yourusername">GitHub</a> |
-          <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+          Name: -
+          <a href="https://github.com/dantebesong321-code/to-do-list-app">
+            GitHub
+          </a>
         </li>
       </ul>
     </div>

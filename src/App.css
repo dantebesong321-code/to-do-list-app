@@ -13,7 +13,7 @@ body {
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   padding: 14px;
   background: linear-gradient(
@@ -30,7 +30,7 @@ body {
 .nav-bar a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
 }
 
 h2,
@@ -139,9 +139,13 @@ button:hover {
   flex-direction: column;
 }
 
-.status-btn{
+.status-btn {
   display: flex;
   gap: 10px;
+}
+.done-btn {
+  background-color: #e8d2f8;
+  color: #6813a1;
 }
 
 .content-area {
@@ -158,8 +162,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  height: 90vh;
-  width: 100px;
+  height: 100vh;
   padding: 16px;
   border-radius: 8px;
   margin: 8px;
@@ -172,9 +175,20 @@ button:hover {
 }
 .side-bar a:hover {
   transition: 2ms;
-  color:rgb(99, 58, 182);
+  color: rgb(66, 28, 142);
   border-radius: 8px;
   cursor: pointer;
+}
+.dashboard-w-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-w-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* FOOTER*/
