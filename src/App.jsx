@@ -5,7 +5,7 @@ import Footer from "./components/Footer.jsx";
 import Sidebar from "./components/Sidebar.jsx";
 import AddTask from "./components/AddTask.jsx";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import AboutPage from "./pages/AboutPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import ItemDetailsPage from "./pages/ItemDetailsPage.jsx";
@@ -15,11 +15,11 @@ import allTasks from "./data/tasks.json";
 
 function App() {
   const [tasks, setTasks] = useState(allTasks);
+ 
 
   return (
     <>
       <Navbar />
-
       <div className="content-area">
         <Sidebar />
         <div className="container-content">
@@ -27,7 +27,7 @@ function App() {
 
           <Routes>
             <Route
-              path="/"
+              path="/dashboard"
               element={<Dashboard tasks={tasks} setTasks={setTasks} />}
             />
             <Route path="/about" element={<AboutPage />} />
@@ -39,7 +39,6 @@ function App() {
           </Routes>
         </div>
       </div>
-
       <Footer />
     </>
   );

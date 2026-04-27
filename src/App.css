@@ -139,6 +139,11 @@ button:hover {
   flex-direction: column;
 }
 
+.status-btn{
+  display: flex;
+  gap: 10px;
+}
+
 .content-area {
   display: flex;
   gap: 8px;

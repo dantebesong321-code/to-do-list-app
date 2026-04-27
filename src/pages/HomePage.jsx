@@ -1,7 +1,12 @@
 import Dashboard from "./Dashboard";
 
 function HomePage() {
-  return <div>HomePage</div>;
-  <Dashboard />;
+      <Dashboard />;
+  return (
+    <div>
+     
+    </div>
+  );
+ 
 }
 export default HomePage;
