@@ -18,7 +18,7 @@ function List({ tasks, setTasks }) {
   };
 
   // We need to implement a toggle functionality
-  // When clicked should show the check mark when done
+  // When clicked should show the check mark if done
   //
 
   const handleToggle = (indexToToggle) => { 

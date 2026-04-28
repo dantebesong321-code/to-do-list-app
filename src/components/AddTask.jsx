@@ -17,7 +17,7 @@ function AddTask({ setTasks }) {
       completed: false,
     };
 
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    setTasks((prevTasks) => [newTask, ...prevTasks]);
 
     setTaskInputValue("");
   };
@@ -28,7 +28,7 @@ function AddTask({ setTasks }) {
         <input
           className="input-zone"
           type="text"
-          placeholder="Write something"
+          placeholder="What's on your mind?"
           value={taskInputValue}
           onChange={handleTaskInput}
         />
